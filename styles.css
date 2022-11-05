@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EXO 2';
+}
+
+body {
+  background-color: #000000;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+header .logo {
+  position: relative;
+  font-size: 28px;
+  color: #ffffffc2;
+  font-weight: 600;
+}
+
+header nav {
+  position: relative;
+}
+
+header nav ul {
+  position: relative;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  color: #ffffff;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+header nav ul li a:hover {
+  color: #ff0083;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 100px;
+  transition: 0.3s;
+}
+
+section .contentBx {
+  max-width: 50%;
+}
+
+section .contentBx h2 {
+  font-size: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+section .contentBx p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+section .contentBx .countdown {
+  display: flex;
+  margin-top: 20px;
+}
+
+section .contentBx .countdown .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 700;
+  background-color: #ffffff97;
+  filter: drop-shadow(-10px -10px 70px #7e1818);
+  color: #a72020;
+  font-size: 48px;
+  min-width: 110px;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+section .contentBx .countdown .time span {
+  color: #312747;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+section .contentBx a {
+  position: relative;
+  background: #ff0083;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 25px;
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border-radius: 30px;
+}
+
+section .imgBx {
+  max-width: 50%;
+  text-align: center;
+}
+
+section .imgBx img {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  margin-top: 100px;
+  z-index: 2;
+}
+
+section .sci {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .sci li {
+  list-style: none;
+}
+
+section .sci li p {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+
+section .sci li a:hover {
+  color: #ff0083;
+}
+
+.newsletter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background: #ffffff;
+  box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.85);
+  z-index: 100000;
+  padding: 60px;
+  visibility: hidden;
+  opacity: 0;
+  transform: 0.5s;
+}
+
+.newsletter.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.newsletter .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.newsletter h2 {
+  font-size: 40px;
+  color: #312747;
+}
+
+.newsletter p {
+  font-size: 18px;
+  color: #aeaeae;
+}
+
+.newsletter .inputBox input {
+  margin-top: 20px;
+  width: 250px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #999;
+  padding: 10px;
+}
+
+.newsletter .inputBox input[type='submit'] {
+  width: 140px;
+  background: #ff0083;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #ff0083;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 991px) {
+  section {
+    flex-direction: column;
+    padding-top: 150px;
+    height: auto;
+  }
+  section .contentBx {
+    max-width: 100%;
+  }
+  section .imgBx {
+    width: 100vw;
+    text-align: center;
+  }
+  section .imgBx img {
+    margin-top: 50px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 20px 50px;
+  }
+  section {
+    padding: 150px 50px 100px;
+  }
+  section .contentBx h2 {
+    font-size: 40px;
+  }
+  section .contentBx p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  section .contentBx a {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #fff;
+    color: #ff0083;
+  }
+  section .imgBx img {
+    width: 100vw;
+  }
+  section .imgBx img {
+    margin-top: 50px;
+    width: 100%;
+  }
+  section .contentBx .countdown .time {
+    font-size: 38px;
+    padding: 8px 0;
+    margin-right: 5px;
+    min-width: 90px;
+  }
+  section .contentBx .countdown .time span {
+    font-size: 16px;
+  }
+  section .newsletter {
+    width: 90%;
+  }
+  section .newsletter.active {
+    width: 90%;
+  }
+}
